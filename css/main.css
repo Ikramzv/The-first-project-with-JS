@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 400px;
+    min-height: auto;
+    background-image: linear-gradient(60deg , rgba(0, 0, 0, 0.466), rgba(0, 0, 0, 0.781), rgba(0, 0, 0, 0.904));
+    background-size: 400%;
+    background-position: left;
+    animation: bodyAnimater 5s ease alternate infinite;
+}
+
+@keyframes bodyAnimater {
+    100% {
+        background-position: right;
+    }
+}
+
+
+
+input {
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #5f9341
+}
+
+input:focus {
+    background-color: lightblue;
+}
+
+button {
+    margin-top: 10px;
+    background-color: #5f9341;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 0 5px 0 black;
+}
+
+#delete-btn {
+    background-color: #fff;
+    color: #5f9341;
+    border: 1px solid #5f9341;
+    position: relative;
+}
+
+#delete-btn::before {
+    content: attr(data-tools);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0.7;
+    font-weight: lighter;
+    border: 1px solid grey;
+    color: #fff;
+    padding: 2px 5px;
+    box-shadow: 0 0 3px 0 black;
+    background: rgba(0, 0, 0, 0.808);
+    transform: scale(0);
+    transition: 0.3s top , 0.3s transform;
+    transition-delay: 0.3s;
+}
+
+#delete-btn:hover::before {
+    top: 110%;
+    transform: scale(0.7);
+}
+
+button:active {
+    box-shadow: inset 0 0 7px 0 #5f9341;
+}
+
+ul {
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul li {
+    list-style: none;
+    margin-top: 5px;
+}
+ 
+li a {
+    text-decoration: underline;
+    color: #5f9341;
+}
